@@ -19,11 +19,11 @@ $tornado = new Bicycle('black');
 // var_dump($tornado);
 
 // // Moving bike
-//echo $bike->forward();
+echo $bike->forward();
 //echo '<br> Vitesse du vélo : ' . $bike->currentSpeed . ' km/h' . '<br>';
-//echo $bike->brake();
+echo $bike->brake();
 //echo '<br> Vitesse du vélo : ' . $bike->currentSpeed . ' km/h' . '<br>';
-//echo $bike->brake();
+echo $bike->brake();
 
  //$tornado->forward();
 
