@@ -83,7 +83,7 @@ class Cars
     //Fonction Avancer 
     public function forward(): string
     {
-       $this->speed >= 10;
+       $this->speed >= 25;
         return "GOOOO!";
        
     }
