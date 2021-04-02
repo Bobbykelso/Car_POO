@@ -19,11 +19,11 @@ $tornado = new Bicycle('black');
 // var_dump($tornado);
 
 // // Moving bike
-echo $bike->forward();
+//echo $bike->forward();
 //echo '<br> Vitesse du vélo : ' . $bike->currentSpeed . ' km/h' . '<br>';
-echo $bike->brake();
+//echo $bike->brake();
 //echo '<br> Vitesse du vélo : ' . $bike->currentSpeed . ' km/h' . '<br>';
-echo $bike->brake();
+//echo $bike->brake();
 
  //$tornado->forward();
 
@@ -43,6 +43,12 @@ $krustyCar = new Cars('Blue', 4,'Essence E10');
 $pattySelmaCar = new Cars('Gold', 4,'Sams plomb98');
 $lovejoyCar = new Cars('White', 4,'Essence E5');
 
-echo $margeCar->start(3);
-echo $margeCar->forward(50);
-echo $margeCar->brake(40);
+
+
+echo $margeCar->start();
+echo $margeCar->forward();
+echo $margeCar->brake();
+
+echo $krustyCar->start();
+echo $krustyCar->forward();
+echo $krustyCar->brake();

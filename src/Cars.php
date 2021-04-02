@@ -6,7 +6,7 @@ class Cars
     private int $nbWheels = 4;
 
     //Vitesse courante
-    private int $speed;
+    private int $speed = 0;
 
     //Couleur de la voiture
     private string $color;
@@ -76,23 +76,24 @@ class Cars
     //Fonction démarrer
     public function start(): string
     {
-        $this->speed >= 1;
+       $this->speed >= 1;
         return "Car started !";
     }
 
     //Fonction Avancer 
     public function forward(): string
     {
-        $this->speed >= 25;
+       $this->speed = 25;
         return "GOOOO!";
+       
     }
 
     //Fonction Freiner
       public function brake(): string
     {
         $frein = "";
-        while ($this->currentSpeed > 0) {
-            $this->currentSpeed--;
+        while ($this->speed > 0) {
+            $this->speed--;
             $frein .= "Brake !";
         }
         $frein .= "Car stopped !";
