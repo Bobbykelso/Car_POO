@@ -1,102 +1,37 @@
 <?php
 
-class Cars
+require_once 'Vehicle.php';
+
+class Car extends Vehicle
 {
-    //Nombres de roues
-    private int $nbWheels = 4;
-
-    //Vitesse courante
-    private int $speed = 0;
-
-    //Couleur de la voiture
-    private string $color;
-
-    //Le nombre de sièges
-    private int $nbSeats;
-
-    //Le type de Carburant
     private string $energy;
 
-     //Le niveau de Carburant Actuel
-    private int $energyLvl;
+    private int $energyLevel;
 
-     //Le constructeur !
     public function __construct(string $color, int $nbSeats, string $energy)
     {
         $this->color = $color;
-        $this->seats = $nbSeats;
+        $this->nbSeats = $nbSeats;
         $this->energy = $energy;
     }
 
-     //Get nombres de roues
-    public function getNbWheels()
-    {
-        return $this->nbWheels;
-    }
-    //Get vitesse courante
-    public function getSpeed()
-    {
-        return $this->speed;
-    }
-    //Get couleur de la voiture
-    public function getColor()
-    {
-        return $this->color;
-    }
-    //Get le nombre de sièges
-    public function getNbSeats()
-    {
-        return $this->nbSeats;
-    }
-    //Get le type de Carburant
-    public function getEnergy()
+    public function getEnergy(): string
     {
         return $this->energy;
     }
-    //Get le niveau de Carburant Actuel
-    public function getEnergyLvl()
+
+    public function setEnergy(string $energy): void
     {
-        return $this->energyLvl;
-    }
-    //Set vitesse courante
-    public function setSpeed($speed)
-    {
-        if($speed >= 0) {
-            $this->speed = $speed;
-        }
-    }
-    //Set le niveau de Carburant Actuel
-    public function setEnergyLvl($energyLvl)
-    {
-        if($energyLvl <= 0) {
-            $this->ernergyLvl = 0;
-        }
+        $this->energy = $energy;
     }
 
-    //Fonction démarrer
-    public function start(): string
+    public function getEnergyLevel(): int
     {
-       $this->speed >= 1;
-        return "Car started !";
+        return $this->energyLevel;
     }
 
-    //Fonction Avancer 
-    public function forward(): string
+    public function setEnergyLevel(int $energyLevel): void
     {
-       $this->speed >= 25;
-        return "GOOOO!";
-       
-    }
-
-    //Fonction Freiner
-      public function brake(): string
-    {
-        $frein = "";
-        while ($this->speed > 0) {
-            $this->speed--;
-            $frein .= "Brake !";
-        }
-        $frein .= "Car stopped !";
-        return $frein;
+        $this->energyLevel = $energyLevel;
     }
 }
